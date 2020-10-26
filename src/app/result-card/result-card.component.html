@@ -1,0 +1,20 @@
+<div class="row result-container">
+    <div class="col">
+        <div id="choice-{{ choiceData.selectedChoice }}-item" class="selected-choice choice-card">
+            <i class="far fa-4x fa-hand-{{ choiceData.selectedChoice }} fa-fw"></i>
+        </div>
+    </div>
+    <div class="col">
+        <div class="result-message">
+            {{ resultMessage }}
+        </div>
+        <div class="play-button">
+            <button class="btn btn-light" (click)="playAgainEvent()">Play Again</button>
+        </div>
+    </div>
+    <div class="col">
+        <div id="choice-{{ choiceData.computerChoice }}-item" class="computer-choice choice-card">
+            <i class="far fa-4x fa-hand-{{ choiceData.computerChoice }} fa-fw"></i>
+        </div>
+    </div>
+</div>

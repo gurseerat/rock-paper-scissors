@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+
+.play-container {
+    margin-bottom: 50px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.card-container {
+    background: #fff;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.card-container:hover {
+    box-shadow: 0px 0px 20px #000;
+}
+
+.item-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item-icon {
+    background: #141d25;
+    margin: 15px;
+    padding: 13px 10px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px #000;
+}
+
+.item-name {
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.or-div {
+    text-align: center;
+    align-self: center;
+    font-size: 25px;
+    font-family: 'Grandstander', cursive;
+}

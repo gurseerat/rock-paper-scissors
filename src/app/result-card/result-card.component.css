@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+
+.result-container {
+    text-align: center;
+    align-items: center;
+}
+
+.choice-card {
+    cursor: pointer;
+    color: #273746;
+    background: #fff;
+    padding: 40px 15px;
+    border-radius: 50%;
+    border-width: 10px;
+    border-style: solid;
+    box-shadow: 0px 0px 5px #000;
+    width: 180px;
+    margin: auto;
+}
+
+.selected-choice {
+    border-color: #F39C12;
+}
+
+.computer-choice {
+    border-color: #E74C3C;
+}
+
+.result-message {
+    font-size: 45px;
+    font-family: 'Grandstander', cursive;
+}

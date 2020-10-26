@@ -1,0 +1,8 @@
+<div class="row select-container">
+    <div class="col" *ngFor="let item of choices">
+        <label id="{{ item }}-item">
+            <input type="radio" value="{{ item }}" name="choice" (change)="selectHandler($event)" class="hide">
+            <i class="far fa-4x fa-hand-{{ item }} fa-fw"></i>
+        </label>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <app-score></app-score>
+  {{isEvaluatedFlag}} {{isSelectedFlag}}
+  <div *ngIf="!isEvaluatedFlag">
+    <app-play (choiceFlag)="choiceFlagEvent($event)" (isSelected)="isSelectedEvent($event)" *ngIf="!isSelectedFlag"></app-play>
+    <app-select [bonusChoiceFlag]="bonusChoiceFlag" (isEvaluated)="isEvaluateEvent($event)" *ngIf="isSelectedFlag"></app-select>
+  </div>
+  <app-result-card *ngIf="isEvaluatedFlag" (isSelected)="isSelectedEvent($event)" (isEvaluated)="isEvaluateEvent($event)"></app-result-card>
+</div>
