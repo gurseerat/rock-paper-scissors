@@ -18,6 +18,7 @@ export class ScoreComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.score = 0;
+    this.isSelectedFlag = false;
   }
 
   ngOnChanges(changes: SimpleChanges): void {

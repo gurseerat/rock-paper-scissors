@@ -6,20 +6,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class ResultService {
 
-  score: BehaviorSubject<any> = new BehaviorSubject(0);
   message: BehaviorSubject<any> = new BehaviorSubject(undefined);
   choices: BehaviorSubject<any> = new BehaviorSubject(undefined);
   
 
   constructor() { }
-
-  public setScore(val): void {
-    this.score.next(val);
-  }
-
-  public getScore(): Observable<any> {
-    return this.score.asObservable();
-  }
 
   public setMessage(val): void {
     this.message.next(val);

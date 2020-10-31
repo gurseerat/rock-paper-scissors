@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { GamesRulesPopupComponent } from './games-rules-popup/games-rules-popup.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,7 @@ export class AppComponent implements OnInit {
   isSelectedFlag: boolean;
   isEvaluatedFlag;
   win: boolean;
-  constructor() {}
+  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {
     this.isSelectedFlag = false;
@@ -33,6 +35,10 @@ export class AppComponent implements OnInit {
 
   winEvent(flag: boolean): void {
     this.win = flag;
+  }
+
+  openGamesRules() {
+    this.modalService.open(GamesRulesPopupComponent);
   }
 
 }

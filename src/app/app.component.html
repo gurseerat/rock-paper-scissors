@@ -1,8 +1,10 @@
 <div class="container">
-  <app-score  [win]="win" [bonusChoiceFlag]="bonusChoiceFlag" [isSelectedFlag]="isSelectedFlag"></app-score>
+  <app-score [win]="win" [bonusChoiceFlag]="bonusChoiceFlag" [isSelectedFlag]="isSelectedFlag"></app-score>
   <div *ngIf="!isEvaluatedFlag">
     <app-play (choiceFlag)="choiceFlagEvent($event)" (isSelected)="isSelectedEvent($event)" *ngIf="!isSelectedFlag"></app-play>
     <app-select [bonusChoiceFlag]="bonusChoiceFlag" (isEvaluated)="isEvaluateEvent($event)" (win)="winEvent($event)" *ngIf="isSelectedFlag"></app-select>
   </div>
   <app-result-card *ngIf="isEvaluatedFlag" (isSelected)="isSelectedEvent($event)" (isEvaluated)="isEvaluateEvent($event)"></app-result-card>
 </div>
+
+<button class="btn btn-dark game-btn" (click)="openGamesRules()">Game Rules</button>

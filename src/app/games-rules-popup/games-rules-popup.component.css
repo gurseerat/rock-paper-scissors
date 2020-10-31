@@ -1,0 +1,20 @@
+.close {
+    top: -25px;
+    position: absolute;
+    right: 2px;
+    color: #fff;
+}
+
+.modal-header {
+    background: #232425;
+}
+
+li.list-group-item {
+    background: #44474e;
+    font-size: 0.9em;
+}
+
+.heading{
+    font-size: 20px;
+    padding: 16px 0px;
+}

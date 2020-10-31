@@ -8,3 +8,15 @@ body {
 .hide {
     display: none;
 }
+
+.modal-dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    min-height: calc(100vh - 60px);
+}
+
+.modal-content  {
+    background: #2b3033;
+}
