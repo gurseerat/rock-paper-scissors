@@ -9,12 +9,14 @@ export class AppComponent implements OnInit {
 
   bonusChoiceFlag: boolean;
   isSelectedFlag: boolean;
-  isEvaluatedFlag: boolean;
+  isEvaluatedFlag;
+  win: boolean;
   constructor() {}
 
   ngOnInit(): void {
     this.isSelectedFlag = false;
     this.isEvaluatedFlag = false;
+    this.win = false;
   }
 
   choiceFlagEvent(flag): void {
@@ -25,8 +27,12 @@ export class AppComponent implements OnInit {
     this.isSelectedFlag = flag;
   }
 
-  isEvaluateEvent(flag): void {
+  isEvaluateEvent(flag: boolean): void {
     this.isEvaluatedFlag = flag;
+  }
+
+  winEvent(flag: boolean): void {
+    this.win = flag;
   }
 
 }

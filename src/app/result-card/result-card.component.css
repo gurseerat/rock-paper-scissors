@@ -3,6 +3,8 @@
 .result-container {
     text-align: center;
     align-items: center;
+    top: 50px;
+    position: relative;
 }
 
 .choice-card {
@@ -20,6 +22,13 @@
 
 .selected-choice {
     border-color: #F39C12;
+    box-shadow: 0px 0px 0px 40px rgb(2 64 76 / 0.6), 
+                0px 0px 0px 80px rgb(2 64 76 / 0.5), 
+                0px 0px 0px 120px rgb(2 64 76 / 0.4), 
+                0px 0px 0px 160px rgb(2 64 76 / 0.3), 
+                0px 0px 0px 200px rgb(2 64 76 / 0.2);
+    z-index: -1000;
+    position: relative;
 }
 
 .computer-choice {
@@ -29,4 +38,8 @@
 .result-message {
     font-size: 45px;
     font-family: 'Grandstander', cursive;
+}
+
+.choice-name {
+    margin-top: 20px;
 }

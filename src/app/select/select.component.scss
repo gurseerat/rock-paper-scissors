@@ -1,0 +1,66 @@
+/// Mixin to place items on a circle
+/// @author Hugo Giraudel
+/// @author Ana Tudor
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size, $item-size) {
+  position: relative;
+  width:  $circle-size;
+  height: $circle-size;
+  padding: 0;
+  border-radius: 50%; 
+	list-style: none;  
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 20%);
+
+  > * {
+    display: block;
+    position: absolute;
+    top:  50%; 
+    left: 50%;
+    width:  $item-size;
+    height: $item-size;
+    margin: -($item-size / 2);
+  
+    $angle: (360 / $item-count);
+    $rot: 25;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform: 
+          rotate($rot * 1deg) 
+          translate($circle-size / 2) 
+          rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}
+
+.select-container {
+    @include on-circle($item-count: 3, $circle-size: 15em, $item-size: 105px); 
+    text-align: center;
+}
+
+.select-container.bonus-container {
+    @include on-circle($item-count: 5, $circle-size: 20em, $item-size: 105px); 
+}
+
+label {
+    cursor: pointer;
+    color: #273746;
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 50%;
+    border-width: 10px;
+    border-style: solid;
+    box-shadow: 0px 0px 5px #000;
+}
+
+label:hover {
+    box-shadow: 0px 0px 15px #000;
+    margin-top: -1px;
+}

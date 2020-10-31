@@ -10,8 +10,8 @@ export class ResultCardComponent implements OnInit {
 
   choiceData: any;
   resultMessage: string;
-  @Output() isSelected = new EventEmitter<string>();
-  @Output() isEvaluated = new EventEmitter<string>();
+  @Output() isSelected = new EventEmitter<boolean>();
+  @Output() isEvaluated = new EventEmitter<boolean>();
 
   constructor(private resultService: ResultService) { }
 
@@ -25,8 +25,8 @@ export class ResultCardComponent implements OnInit {
   }
 
   playAgainEvent() {
-    this.isSelected.emit('false');
-    this.isEvaluated.emit('false');
+    this.isSelected.emit(false);
+    this.isEvaluated.emit(false);
   }
 
 }

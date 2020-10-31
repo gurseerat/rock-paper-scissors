@@ -1,4 +1,4 @@
-<div class="row select-container">
+<div class="row select-container" [ngClass]="bonusChoiceFlag && 'bonus-container'">
     <div class="col" *ngFor="let item of choices">
         <label id="{{ item }}-item">
             <input type="radio" value="{{ item }}" name="choice" (change)="selectHandler($event)" class="hide">
